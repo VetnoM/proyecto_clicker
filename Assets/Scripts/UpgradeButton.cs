@@ -7,6 +7,7 @@ using TMPro;
 public class UpgradeButton : MonoBehaviour
 {
     GameManager game;
+    CanvasGroup cg;
 
     public enum UpgradeType { ClickValue, Passive, Custom }
 
@@ -33,6 +34,7 @@ public class UpgradeButton : MonoBehaviour
     void Awake()
     {
         if (!button) button = GetComponent<Button>();
+        if (!cg) cg = GetComponent<CanvasGroup>();
         game = GameManager.I ?? FindObjectOfType<GameManager>();
 
         RefreshUI();
@@ -42,6 +44,7 @@ public class UpgradeButton : MonoBehaviour
     void OnEnable()
     {
         if (!button) button = GetComponent<Button>();
+        if (!cg) cg = GetComponent<CanvasGroup>();
         if (!game) game = GameManager.I ?? FindObjectOfType<GameManager>();
 
         if (button)
@@ -93,6 +96,8 @@ public class UpgradeButton : MonoBehaviour
         // Refrescar textos
         game.SendMessage("UpdateUI", SendMessageOptions.DontRequireReceiver);
         RefreshUI();
+
+        EvaluateInteractable();
     }
 
     public double CurrentCost()
@@ -112,13 +117,20 @@ public class UpgradeButton : MonoBehaviour
         if (!game)
             game = GameManager.I ?? FindObjectOfType<GameManager>();
 
-        if (!game)
+        bool canBuy = false;
+
+        if (game)
         {
-            button.interactable = false;
-            return;
+            double cost = CurrentCost();
+            canBuy = game.coins >= cost;
         }
 
-        double cost = CurrentCost();
-        button.interactable = game.coins >= cost;
+        button.interactable = canBuy;
+
+        if (cg)
+        {
+            cg.interactable = canBuy;
+            cg.blocksRaycasts = canBuy;
+        }
     }
 }
