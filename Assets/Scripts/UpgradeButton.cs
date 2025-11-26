@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 
+[RequireComponent(typeof(Button))]
 public class UpgradeButton : MonoBehaviour
 {
+    GameManager game;
+    CanvasGroup cg;
+
     public enum UpgradeType { ClickValue, Passive, Custom }
 
     [Header("Tipo de mejora")]
@@ -30,32 +34,57 @@ public class UpgradeButton : MonoBehaviour
     void Awake()
     {
         if (!button) button = GetComponent<Button>();
+        if (!cg) cg = GetComponent<CanvasGroup>();
+        game = GameManager.I ?? FindObjectOfType<GameManager>();
+
         RefreshUI();
-        if (GameManager.I) button.interactable = GameManager.I.coins >= CurrentCost();
+        EvaluateInteractable();
+    }
+
+    void OnEnable()
+    {
+        if (!button) button = GetComponent<Button>();
+        if (!cg) cg = GetComponent<CanvasGroup>();
+        if (!game) game = GameManager.I ?? FindObjectOfType<GameManager>();
+
+        if (button)
+            button.onClick.AddListener(Buy);
+
+        EvaluateInteractable();
+    }
+
+    void OnDisable()
+    {
+        if (button)
+            button.onClick.RemoveListener(Buy);
     }
 
     void Update()
     {
-        if (!button || !GameManager.I) return;
-        double cost = CurrentCost();
-        button.interactable = GameManager.I.coins >= cost; // ← FIX
+        if (!button)
+            return;
+
+        if (!game)
+            game = GameManager.I ?? FindObjectOfType<GameManager>();
+
+        EvaluateInteractable();
     }
 
     public void Buy()
     {
-        if (!GameManager.I) return;
+        if (!game) return;
 
         double cost = CurrentCost();
-        if (GameManager.I.coins < cost) return;
+        if (game.coins < cost) return;
 
         // Pagar
-        GameManager.I.coins -= cost;
+        game.coins -= cost;
 
         // Aplicar
         switch (type)
         {
-            case UpgradeType.ClickValue: GameManager.I.AddClickValue(amountPerLevel); break;
-            case UpgradeType.Passive: GameManager.I.AddCPS(amountPerLevel); break;
+            case UpgradeType.ClickValue: game.AddClickValue(amountPerLevel); break;
+            case UpgradeType.Passive: game.AddCPS(amountPerLevel); break;
             case UpgradeType.Custom:     /* vía OnPurchased */                        break;
         }
 
@@ -65,8 +94,10 @@ public class UpgradeButton : MonoBehaviour
         OnPurchased?.Invoke();
 
         // Refrescar textos
-        GameManager.I.SendMessage("UpdateUI", SendMessageOptions.DontRequireReceiver);
+        game.SendMessage("UpdateUI", SendMessageOptions.DontRequireReceiver);
         RefreshUI();
+
+        EvaluateInteractable();
     }
 
     public double CurrentCost()
@@ -77,5 +108,29 @@ public class UpgradeButton : MonoBehaviour
     public void RefreshUI()
     {
         if (txtCost) txtCost.text = $"Coste: {CurrentCost():0}";
+    }
+
+    void EvaluateInteractable()
+    {
+        if (!button) return;
+
+        if (!game)
+            game = GameManager.I ?? FindObjectOfType<GameManager>();
+
+        bool canBuy = false;
+
+        if (game)
+        {
+            double cost = CurrentCost();
+            canBuy = game.coins >= cost;
+        }
+
+        button.interactable = canBuy;
+
+        if (cg)
+        {
+            cg.interactable = canBuy;
+            cg.blocksRaycasts = canBuy;
+        }
     }
 }
