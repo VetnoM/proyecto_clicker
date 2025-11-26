@@ -3,6 +3,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 
+[RequireComponent(typeof(Button))]
 public class UpgradeButton : MonoBehaviour
 {
     public enum UpgradeType { ClickValue, Passive, Custom }
@@ -32,6 +33,19 @@ public class UpgradeButton : MonoBehaviour
         if (!button) button = GetComponent<Button>();
         RefreshUI();
         if (GameManager.I) button.interactable = GameManager.I.coins >= CurrentCost();
+    }
+
+    void OnEnable()
+    {
+        if (!button) button = GetComponent<Button>();
+        if (button)
+            button.onClick.AddListener(Buy);
+    }
+
+    void OnDisable()
+    {
+        if (button)
+            button.onClick.RemoveListener(Buy);
     }
 
     void Update()
