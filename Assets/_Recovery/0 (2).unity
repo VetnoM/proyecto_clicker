@@ -797,31 +797,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 401b141bc7b4d424fa3e240b7173437b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeButton
-  type: 2
-  baseCost: 10
+  type: 1
+  baseCost: 50
   costMultiplier: 1.15
   amountPerLevel: 1
   level: 0
-  txtName: {fileID: 644495639}
-  txtTitle: {fileID: 1263855200}
-  txtCost: {fileID: 1213855152}
-  txtLevel: {fileID: 596830483}
+  txtName: {fileID: 0}
+  txtTitle: {fileID: 0}
+  txtCost: {fileID: 0}
   button: {fileID: 360179143}
   OnPurchased:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2019442251}
-        m_TargetAssemblyTypeName: AutoclickerManager, Assembly-CSharp
-        m_MethodName: BuyMouse
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &360179142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,19 +872,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 360179144}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 360179141}
-        m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &360179144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2024,31 +1999,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 401b141bc7b4d424fa3e240b7173437b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeButton
-  type: 2
-  baseCost: 10
+  type: 1
+  baseCost: 200
   costMultiplier: 1.25
   amountPerLevel: 1
   level: 0
-  txtName: {fileID: 1931677815}
-  txtTitle: {fileID: 655821848}
-  txtCost: {fileID: 295481187}
-  txtLevel: {fileID: 1278143487}
+  txtName: {fileID: 0}
+  txtTitle: {fileID: 0}
+  txtCost: {fileID: 0}
   button: {fileID: 1023026472}
   OnPurchased:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2019442251}
-        m_TargetAssemblyTypeName: AutoclickerManager, Assembly-CSharp
-        m_MethodName: UpgradeSpeed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1023026471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2112,19 +2074,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1023026473}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1023026470}
-        m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1023026473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3619,19 +3569,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1571690693}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1571690695}
-        m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1571690693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3687,10 +3625,9 @@ MonoBehaviour:
   costMultiplier: 1.15
   amountPerLevel: 1
   level: 0
-  txtName: {fileID: 191426888}
-  txtTitle: {fileID: 1530036424}
-  txtCost: {fileID: 1497137174}
-  txtLevel: {fileID: 1225319539}
+  txtName: {fileID: 0}
+  txtTitle: {fileID: 0}
+  txtCost: {fileID: 0}
   button: {fileID: 1571690692}
   OnPurchased:
     m_PersistentCalls:
@@ -3708,7 +3645,6 @@ GameObject:
   - component: {fileID: 1652584128}
   - component: {fileID: 1652584127}
   - component: {fileID: 1652584130}
-  - component: {fileID: 1652584131}
   m_Layer: 5
   m_Name: ButtonClick
   m_TagString: Untagged
@@ -3779,6 +3715,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 935874036}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1652584130}
         m_TargetAssemblyTypeName: ClickPulse, Assembly-CSharp
         m_MethodName: Play
@@ -3843,21 +3791,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClickPulse
   target: {fileID: 0}
   pressScale: 0.9
-  relaxSpeed: 20
---- !u!114 &1652584131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1652584125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718c3b9ea61aa6644b016692b9619db3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickArea
-  clickPulse: {fileID: 1652584130}
-  fxCooldown: 0.08
+  reboundScale: 1.1
+  downTime: 0.1
+  upTime: 0.18
 --- !u!1 &1678544627
 GameObject:
   m_ObjectHideFlags: 0
@@ -4087,19 +4023,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1759035986}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1759035989}
-        m_TargetAssemblyTypeName: UpgradeButton, Assembly-CSharp
-        m_MethodName: Buy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1759035986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4171,14 +4095,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeButton
   type: 1
-  baseCost: 10
+  baseCost: 500
   costMultiplier: 1.15
   amountPerLevel: 2
   level: 0
-  txtName: {fileID: 508668343}
-  txtTitle: {fileID: 1003170091}
-  txtCost: {fileID: 2014943336}
-  txtLevel: {fileID: 459705517}
+  txtName: {fileID: 0}
+  txtTitle: {fileID: 0}
+  txtCost: {fileID: 0}
   button: {fileID: 1759035985}
   OnPurchased:
     m_PersistentCalls:

@@ -3,7 +3,7 @@ using UnityEngine;
 using TMPro;
 
 #if ENABLE_INPUT_SYSTEM
-using UnityEngine.InputSystem; // Nuevo Input System
+using UnityEngine.InputSystem; // por si lo necesitas más tarde
 #endif
 
 public class GameManager : MonoBehaviour
@@ -11,19 +11,17 @@ public class GameManager : MonoBehaviour
     public static GameManager I;
 
     [Header("Economía")]
-    public double coins = 0;
+    public double coins = 0;              // tu “moneda”: la llamamos Clicks en UI
     public double coinsPerClick = 1;
-    public double coinsPerSecond = 0;
+    public double coinsPerSecond = 0;     // pasivo (si lo usas)
 
     [Header("UI")]
-    public TextMeshProUGUI coinsText;
-    public TextMeshProUGUI cpsText; // CPS manual (media móvil)
+    public TextMeshProUGUI coinsText;     // mostrará: Clicks: X
+    public TextMeshProUGUI cpsText;       // mostrará: CPS: Y
 
-    // Refresco UI
-    float uiTimer = 0f;
-    const float UI_REFRESH = 0.25f;
+ 
 
-    // CPS manual (ventana móvil)
+    // CPS manual (media móvil)
     readonly Queue<float> clickTimes = new Queue<float>();
     [SerializeField] float cpsWindowSeconds = 3f;
 
@@ -50,34 +48,54 @@ public class GameManager : MonoBehaviour
         if (coinsPerSecond > 0)
             coins += coinsPerSecond * Time.deltaTime;
 
-        uiTimer += Time.deltaTime;
-        if (uiTimer >= UI_REFRESH)
-        {
-            uiTimer = 0f;
-            UpdateUI();
-        }
+        //uiTimer += Time.deltaTime;
+        //if (uiTimer >= UI_REFRESH)
+        //{
+        //    uiTimer = 0f;
+        //    UpdateUI();
+        //}
+        UpdateUI();
     }
 
-    /// Click del jugador (desde el botón).
+    // Click manual del botón central
     public void OnClick()
     {
         coins += coinsPerClick;
+
+        // registrar el click para el CPS del jugador
         clickTimes.Enqueue(Time.unscaledTime);
 
-        // FX: SOLO una llamada, centrada en el botón (más potente)
-        ClickFXManager.I?.PlayClickFX($"+{coinsPerClick:0}", 36);
-        // Nota: no llamamos UpdateUI aquí; ya refresca en Update() cada 0.25s.
+        //// 🔹 REFRESCAR UI AL INSTANTE
+        //UpdateUI();
+
+        ////// FX de texto+partículas
+        ////ClickFXManager.I?.PlayClickFX($"+{coinsPerClick:0}", 36);
+
+//        Vector2 screenPos;
+//#if ENABLE_INPUT_SYSTEM
+//        if (Mouse.current != null)
+//            screenPos = Mouse.current.position.ReadValue();
+//        else if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
+//            screenPos = Touchscreen.current.primaryTouch.position.ReadValue();
+//        else
+//            screenPos = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
+//#else
+//    screenPos = Input.mousePosition;
+//#endif
+
+//        if (ClickFXManager.I && ClickFXManager.I.canvasRoot)
+//        {
+//            Vector2 uiPos;
+//            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+//                ClickFXManager.I.canvasRoot, screenPos, null, out uiPos
+//            );
+
+//            ClickFXManager.I.PlayClickFXAt(uiPos, $"+{coinsPerClick:0}", 28);
+//        }
     }
 
-    /// Alternativa si quisieras separar explícitamente el click manual.
-    public void OnManualClick()
-    {
-        coins += coinsPerClick;
-        clickTimes.Enqueue(Time.unscaledTime);
-        ClickFXManager.I?.PlayClickFX($"+{coinsPerClick:0}", 36);
-    }
 
-    // Mejoras usadas por los botones
+    // APIs que usan los botones de mejora
     public void AddClickValue(double amount)
     {
         coinsPerClick += amount;
@@ -94,7 +112,14 @@ public class GameManager : MonoBehaviour
 
     void UpdateUI()
     {
-        if (coinsText) coinsText.text = $"Monedas: {coins:0}";
-        if (cpsText) cpsText.text = $"CPS: {PlayerCPS:0.##}";
+        if (coinsText) coinsText.text = $"Clicks: {coins:0}";
+
+        if (cpsText)
+        {
+            double totalCPS = PlayerCPS + coinsPerSecond;
+            cpsText.text = $"CPS: {totalCPS:0.##}";
+          
+        }
     }
+
 }

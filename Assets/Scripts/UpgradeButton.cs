@@ -8,37 +8,42 @@ public class UpgradeButton : MonoBehaviour
     public enum UpgradeType { ClickValue, Passive, Custom }
 
     [Header("Tipo de mejora")]
-    public UpgradeType type = UpgradeType.Custom;
+    public UpgradeType type = UpgradeType.ClickValue;
 
     [Header("Economía")]
-    public double baseCost = 50;
-    public double costMultiplier = 1.15;   // coste escala por nivel
-    public double amountPerLevel = 1;      // ClickValue = +X por click; Passive = +X cps
+    public double baseCost = 10;
+    public double costMultiplier = 1.15;
+    public double amountPerLevel = 1;
 
     [Header("Estado")]
     public int level = 0;
 
     [Header("UI")]
-    public TextMeshProUGUI txtName;   // opcional
-    public TextMeshProUGUI txtTitle;  // opcional
-    public TextMeshProUGUI txtCost;   // coste
+    public TextMeshProUGUI txtName;
+    public TextMeshProUGUI txtTitle;
+    public TextMeshProUGUI txtCost;
+    public TextMeshProUGUI txtLevel;
     public Button button;
 
-    [Header("Evento al comprar (para Custom)")]
+    [Header("Evento al comprar (solo si type = Custom)")]
     public UnityEvent OnPurchased;
 
     void Awake()
     {
         if (!button) button = GetComponent<Button>();
         RefreshUI();
-        if (GameManager.I) button.interactable = GameManager.I.coins >= CurrentCost();
+
+        if (GameManager.I)
+            button.interactable = GameManager.I.coins >= CurrentCost();
     }
 
     void Update()
     {
         if (!button || !GameManager.I) return;
+
         double cost = CurrentCost();
-        button.interactable = GameManager.I.coins >= cost; // ← FIX
+        // IMPORTANTE: sin "&& button.interactable"
+        button.interactable = GameManager.I.coins >= cost;
     }
 
     public void Buy()
@@ -48,23 +53,30 @@ public class UpgradeButton : MonoBehaviour
         double cost = CurrentCost();
         if (GameManager.I.coins < cost) return;
 
-        // Pagar
+        // pagar
         GameManager.I.coins -= cost;
 
-        // Aplicar
+        // aplicar según tipo
         switch (type)
         {
-            case UpgradeType.ClickValue: GameManager.I.AddClickValue(amountPerLevel); break;
-            case UpgradeType.Passive: GameManager.I.AddCPS(amountPerLevel); break;
-            case UpgradeType.Custom:     /* vía OnPurchased */                        break;
+            case UpgradeType.ClickValue:
+                GameManager.I.AddClickValue(amountPerLevel);
+                break;
+
+            case UpgradeType.Passive:
+                GameManager.I.AddCPS(amountPerLevel);
+                break;
+
+            case UpgradeType.Custom:
+                // lo ejecuta OnPurchased
+                break;
         }
 
         level++;
 
-        // Evento custom (autoclickers, etc.)
+        // evento custom (para autoclickers, etc.)
         OnPurchased?.Invoke();
 
-        // Refrescar textos
         GameManager.I.SendMessage("UpdateUI", SendMessageOptions.DontRequireReceiver);
         RefreshUI();
     }
@@ -77,5 +89,6 @@ public class UpgradeButton : MonoBehaviour
     public void RefreshUI()
     {
         if (txtCost) txtCost.text = $"Coste: {CurrentCost():0}";
+        if (txtLevel) txtLevel.text = $"Nivel: {level}";
     }
 }

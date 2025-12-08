@@ -16,6 +16,8 @@ public class AutoclickerManager : MonoBehaviour
     public int maxAgents = 10;       // tope de ratones visibles
     public float perLevelBonus = 0.15f; // +15% de CPS por nivel (de cada agente)
 
+
+
     // Seguimiento interno (también reconstruimos desde la escena)
     readonly List<AutoclickerAgent> agents = new List<AutoclickerAgent>();
 
@@ -55,8 +57,24 @@ public class AutoclickerManager : MonoBehaviour
     // Botón A: Añadir ratón (hasta maxAgents)
     public void BuyMouse()
     {
-        RebuildAgentsListFromScene(); SanitizeAgentsList();
-        if (AtCap || !agentPrefab || !clickButton || !agentsRoot) return;
+        Debug.Log("[AutoClickers] BuyMouse llamado");
+
+        if (!agentsRoot || !agentPrefab || !clickButton)
+        {
+            Debug.LogWarning("[AutoClickers] Falta asignar agentsRoot / agentPrefab / clickButton en el Inspector");
+            return;
+        }
+
+        // Contamos agentes reales en escena bajo agentsRoot
+        int countInScene = agentsRoot.GetComponentsInChildren<AutoclickerAgent>(false).Length;
+        Debug.Log($"[AutoClickers] Agentes en escena antes de comprar: {countInScene}");
+
+        if (countInScene >= maxAgents)
+        {
+            Debug.Log("[AutoClickers] Ya está en el máximo de agentes, no creo más.");
+            return;
+        }
+
         SpawnAgent();
     }
 
@@ -212,6 +230,18 @@ public class AutoclickerManager : MonoBehaviour
 
         Debug.Log($"[AutoClickers] Reparent hecho. Agentes: {agentsRoot.childCount}/{maxAgents}");
     }
+
+    public int CurrentAgents
+    {
+        get
+        {
+            if (!agentsRoot) return 0;
+            return agentsRoot.GetComponentsInChildren<AutoclickerAgent>(false).Length;
+        }
+    }
+
+    public int MaxAgents => maxAgents;
+
 
 
 }

@@ -35,6 +35,11 @@ public class AutoclickerAgent : MonoBehaviour
     public int maxVisualLevel = 10;                    // para mapear niveles a color
     public Gradient levelGradient;                     // opcional: arrástralo en el Inspector
 
+    [Header("FX AutoClicker")]
+    public bool showFx = true;
+    public float fxCooldown = 0.15f;   // mínimo tiempo entre FX de ESTE agente (≈ 6-7 por segundo)
+    float lastFxTime;
+
     // Estado interno
     RectTransform rt;
     float angle;
@@ -107,20 +112,42 @@ public class AutoclickerAgent : MonoBehaviour
         while (t < dashTime)
         {
             t += Time.unscaledDeltaTime;
-            float k = 1f - Mathf.Pow(1f - Mathf.Clamp01(t / dashTime), 3f); // easeOutCubic
+            float k = 1f - Mathf.Pow(1f - Mathf.Clamp01(t / dashTime), 3f);
             rt.anchoredPosition = Vector2.LerpUnclamped(from, to, k * overshoot);
             yield return null;
         }
         rt.anchoredPosition = to;
 
-        // “Click” real + pulso visual opcional
+        // “Click” real + pulso visual
         if (clickPulse) clickPulse.Play();
         if (GameManager.I != null) GameManager.I.OnClick();
-        ClickFXManager.I?.PlayClickFX($"+{(int)(GameManager.I?.coinsPerClick ?? 1)}");
-        ClickFXManager.I?.PlayClickFXAt(rt.anchoredPosition, null, 10);
 
+        // --- FX de "+X" para el agente (justo después del click) ---
+        if (showFx && ClickFXManager.I != null && GameManager.I != null)
+        {
+            float now = Time.unscaledTime;
+            if (now - lastFxTime >= fxCooldown)
+            {
+                lastFxTime = now;
 
+                Vector2 uiPos;
+                if (targetButton != null)
+                {
+                    uiPos = targetButton.anchoredPosition;
+                }
+                else
+                {
+                    var rt = transform as RectTransform;
+                    uiPos = rt != null ? rt.anchoredPosition : Vector2.zero;
+                }
 
+                ClickFXManager.I.PlayClickFXAt(
+                    uiPos,
+                    $"+{GameManager.I.coinsPerClick:0}",
+                    10 // menos partículas que el click manual
+                );
+            }
+        }
 
         // Pausa breve encima del botón
         yield return new WaitForSecondsRealtime(holdTime);
@@ -130,16 +157,15 @@ public class AutoclickerAgent : MonoBehaviour
         while (t < returnTime)
         {
             t += Time.unscaledDeltaTime;
-            float k = Mathf.Pow(Mathf.Clamp01(t / returnTime), 3f); // easeInCubic
+            float k = Mathf.Pow(Mathf.Clamp01(t / returnTime), 3f);
             rt.anchoredPosition = Vector2.LerpUnclamped(to, from, k);
             yield return null;
         }
         rt.anchoredPosition = from;
 
         isDashing = false;
-
-
     }
+
 
     // === Colores / Feedback ===
     public void ApplyLevelColor()
