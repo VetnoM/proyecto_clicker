@@ -1,24 +1,15 @@
-﻿using UnityEngine;
-using TMPro;
+﻿using TMPro;
+using UnityEngine;
 
 public class MouseCountTitle : MonoBehaviour
 {
     public AutoclickerManager manager;
     public TextMeshProUGUI title;
 
-    static T FindOne<T>() where T : Object
-    {
-#if UNITY_2023_1_OR_NEWER
-        return Object.FindFirstObjectByType<T>();
-#else
-        return Object.FindObjectOfType<T>();
-#endif
-    }
-
     void Awake()
     {
-        if (!manager) manager = FindOne<AutoclickerManager>();
         if (!title) title = GetComponent<TextMeshProUGUI>();
+        if (!manager) manager = FindFirstObjectByType<AutoclickerManager>();
     }
 
     void Update()

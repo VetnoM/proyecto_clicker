@@ -3,39 +3,24 @@ using UnityEngine.EventSystems;
 
 public class ClickArea : MonoBehaviour, IPointerDownHandler
 {
-    public ClickPulse clickPulse;
+    [SerializeField] private ClickPulse clickPulse;
+    [SerializeField] private ClickFXManager clickFXManager; // arrÃ¡stralo en el inspector si lo tienes
+    [SerializeField] private float fxCooldown = 0.08f;
 
-    [Header("FX")]
-    public float fxCooldown = 0.08f;   // mínimo tiempo entre FX (~12 por segundo)
-    float lastFxTime;
-
-    void Awake()
-    {
-        if (!clickPulse) clickPulse = GetComponent<ClickPulse>();
-    }
+    private float lastFxTime = -999f;
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        // 1) Lógica del click (barata)
-        if (GameManager.I != null)
-            GameManager.I.OnClick();
+        // AnimaciÃ³n (opcional)
+        if (clickPulse != null) clickPulse.Play();
 
-        // 2) Animación del botón (barata)
-        if (clickPulse)
-            clickPulse.Play();
+        // FX / texto flotante (solo 1 vez por pulsaciÃ³n)
+        if (Time.unscaledTime - lastFxTime < fxCooldown) return;
+        lastFxTime = Time.unscaledTime;
 
-        // 3) FX de "+X" con frecuencia limitada
-        if (ClickFXManager.I != null && GameManager.I != null)
+        if (clickFXManager != null)
         {
-            float now = Time.unscaledTime;
-            if (now - lastFxTime >= fxCooldown)
-            {
-                lastFxTime = now;
-                ClickFXManager.I.PlayClickFX(
-                    $"+{GameManager.I.coinsPerClick:0}",
-                    20 // menos partículas que antes
-                );
-            }
+           // clickFXManager.PlayClickFX(); // <-- si en tu ClickFXManager el mÃ©todo se llama distinto, cÃ¡mbialo aquÃ­
         }
     }
 }

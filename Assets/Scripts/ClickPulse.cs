@@ -18,7 +18,7 @@ public class ClickPulse : MonoBehaviour
 
     public void Play()
     {
-        // Al hacer click, simplemente dejamos el botón un poco "hundido"
+        // Al hacer click, simplemente dejamos el botÃ³n un poco "hundido"
         target.localScale = baseScale * pressScale;
     }
 

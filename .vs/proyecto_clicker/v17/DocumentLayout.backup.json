@@ -3,56 +3,92 @@
   "WorkspaceRootPath": "D:\\Unity\\projectos\\proyecto_clicker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|d:\\unity\\projectos\\proyecto_clicker\\assets\\scripts\\factoryvisualcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\factoryvisualcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\autoclickeragent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\autoclickeragent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|d:\\unity\\projectos\\proyecto_clicker\\assets\\scripts\\autoclickermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\autoclickermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\upgradebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|d:\\unity\\projectos\\proyecto_clicker\\assets\\scripts\\upgradebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\upgradebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\clickfxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clickfxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\clickpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clickpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\projectos\\proyecto_clicker\\Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:1:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\floatingtext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\floatingtext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\mejoraspaneltoggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mejoraspaneltoggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\buttoncapbyagents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttoncapbyagents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\autoclickervfxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\autoclickervfxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\gamebackgroundintro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamebackgroundintro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\scenefader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scenefader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\mainmenuintro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenuintro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\optionsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\optionsmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\mousecounttitle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mousecounttitle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\MenyManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MenyManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\autoclickermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\autoclickermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\autoclickeragent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\autoclickeragent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\clickarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clickarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\clickpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clickpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\clickfxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clickfxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\floatingtext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\floatingtext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\autoclickervfxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\autoclickervfxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|D:\\Unity\\projectos\\proyecto_clicker\\assets\\scripts\\mousemover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76DCDA0D-76E9-285D-DD52-E962420CA8F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mousemover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\projectos\\proyecto_clicker\\Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\projectos\\proyecto_clicker\\Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\UpgradesPanelToggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\UpgradesPanelToggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,35 +98,157 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "DebugUpdater.cs",
-              "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs",
-              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs",
-              "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs",
-              "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FactoryVisualController.cs",
+              "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\FactoryVisualController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FactoryVisualController.cs",
+              "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\FactoryVisualController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FactoryVisualController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T09:53:47.34Z"
+              "WhenOpened": "2025-12-16T20:28:15.608Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DebugUpdater.cs",
-              "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs",
-              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs",
-              "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs",
-              "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "MejorasPanelToggle.cs",
+              "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\MejorasPanelToggle.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MejorasPanelToggle.cs",
+              "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\MejorasPanelToggle.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MejorasPanelToggle.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAkwGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T09:53:47.34Z"
+              "WhenOpened": "2025-12-16T12:27:20.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UpgradesPanelToggle.cs",
+              "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\UpgradesPanelToggle.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UpgradesPanelToggle.cs",
+              "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\UpgradesPanelToggle.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UpgradesPanelToggle.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T11:55:19.875Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "GameBackgroundIntro.cs",
+              "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\GameBackgroundIntro.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameBackgroundIntro.cs",
+              "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\GameBackgroundIntro.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameBackgroundIntro.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwBQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T10:35:45.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SceneFader.cs",
+              "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\SceneFader.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SceneFader.cs",
+              "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\SceneFader.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SceneFader.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAqwGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T08:10:28.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainMenuIntro.cs",
+              "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\MainMenuIntro.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenuIntro.cs",
+              "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\MainMenuIntro.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MainMenuIntro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T13:53:44.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OptionsMenu.cs",
+              "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\OptionsMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\OptionsMenu.cs",
+              "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\OptionsMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\OptionsMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T09:08:44.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MenuManager.cs",
+              "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\MenuManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MenuManager.cs",
+              "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\MenuManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MenuManager.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T08:33:28.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MenyManager.cs",
+              "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\MenyManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MenyManager.cs",
+              "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\MenyManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MenyManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T08:06:32.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ClickArea.cs",
+              "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\ClickArea.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ClickArea.cs",
+              "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\ClickArea.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ClickArea.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAcwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T09:07:01.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwBUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T07:45:55.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DebugUpdater.cs",
+              "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs",
+              "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.core@f2c863af5658\\Runtime\\Debugging\\DebugUpdater.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T09:53:47.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "ClickFXManager.cs",
               "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\ClickFXManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ClickFXManager.cs",
@@ -102,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 17,
               "Title": "FloatingText.cs",
               "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\FloatingText.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FloatingText.cs",
@@ -114,70 +272,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "MouseCountTitle.cs",
               "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\MouseCountTitle.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MouseCountTitle.cs",
               "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\MouseCountTitle.cs",
               "RelativeToolTip": "Assets\\Scripts\\MouseCountTitle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T07:38:45.141Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "AutoclickerManager.cs",
               "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\AutoclickerManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\AutoclickerManager.cs",
               "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\AutoclickerManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\AutoclickerManager.cs",
-              "ViewState": "AgIAAMwAAAAAAAAAAAAlwOcAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T08:47:12.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T08:47:12.364Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "AutoclickerAgent.cs",
               "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\AutoclickerAgent.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\AutoclickerAgent.cs",
               "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\AutoclickerAgent.cs",
               "RelativeToolTip": "Assets\\Scripts\\AutoclickerAgent.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAIAwwHYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAcwKcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T08:46:19.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T08:46:19.176Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "ButtonCapByAgents.cs",
               "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\ButtonCapByAgents.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ButtonCapByAgents.cs",
               "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\ButtonCapByAgents.cs",
               "RelativeToolTip": "Assets\\Scripts\\ButtonCapByAgents.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAcwEoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T07:36:53.189Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\GameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
-              "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\GameManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAIwEgAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T07:45:55.595Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "AutoClickerVFXManager.cs",
               "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\AutoClickerVFXManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\AutoClickerVFXManager.cs",
@@ -189,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "MouseMover.cs",
               "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\MouseMover.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MouseMover.cs",
@@ -201,25 +344,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "UpgradeButton.cs",
               "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\UpgradeButton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UpgradeButton.cs",
               "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\UpgradeButton.cs",
               "RelativeToolTip": "Assets\\Scripts\\UpgradeButton.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAcwF4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAmwAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T09:49:35.535Z"
+              "WhenOpened": "2025-11-05T09:49:35.535Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "ClickPulse.cs",
               "DocumentMoniker": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\ClickPulse.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ClickPulse.cs",
               "ToolTip": "D:\\Unity\\projectos\\proyecto_clicker\\Assets\\Scripts\\ClickPulse.cs",
               "RelativeToolTip": "Assets\\Scripts\\ClickPulse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAcwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-13T08:14:50.911Z"
             }

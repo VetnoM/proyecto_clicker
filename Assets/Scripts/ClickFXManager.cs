@@ -46,8 +46,12 @@ public class ClickFXManager : MonoBehaviour
             rt.anchoredPosition = clickButton.anchoredPosition;
             var fts = ft.GetComponent<FloatingText>() ?? ft.gameObject.AddComponent<FloatingText>();
             fts.label = ft;
-            fts.Play(text ?? "+1");
-        }
+string finalText = text;
+if (string.IsNullOrEmpty(finalText))
+    finalText = (GameManager.I != null) ? $"+{GameManager.I.coinsPerClick:0}" : "+1";
+
+fts.Play(finalText, Color.white);
+       }
 
         uiBurst?.PlayAt(clickButton.anchoredPosition, countOverride);
 
@@ -69,7 +73,12 @@ public class ClickFXManager : MonoBehaviour
             rt.anchoredPosition = uiPos;
             var fts = ft.GetComponent<FloatingText>() ?? ft.gameObject.AddComponent<FloatingText>();
             fts.label = ft;
-            fts.Play(text ?? "+1");
+           string finalText = text;
+if (string.IsNullOrEmpty(finalText))
+    finalText = (GameManager.I != null) ? $"+{GameManager.I.coinsPerClick:0}" : "+1";
+
+fts.Play(finalText);
+
         }
 
         uiBurst?.PlayAt(uiPos, countOverride);
@@ -78,4 +87,23 @@ public class ClickFXManager : MonoBehaviour
         Debug.Log("[FX] PlayClickFXAt (pos UI)");
 
     }
+
+    public void PlayClickFXColored(string text, Color color, int countOverride = -1)
+{
+    if (floatingTextPrefab && canvasRoot && clickButton)
+    {
+        var ft = Instantiate(floatingTextPrefab, canvasRoot);
+        var rt = (RectTransform)ft.transform;
+        rt.anchoredPosition = clickButton.anchoredPosition;
+
+        var fts = ft.GetComponent<FloatingText>() ?? ft.gameObject.AddComponent<FloatingText>();
+        fts.label = ft;
+        fts.Play(text, color);
+    }
+
+    uiBurst?.PlayAt(clickButton.anchoredPosition, countOverride);
+
+    if (audioSource && clickSfx) audioSource.PlayOneShot(clickSfx, 0.85f);
+}
+
 }

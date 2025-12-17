@@ -1,125 +1,141 @@
-﻿using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
-using TMPro;
-
-#if ENABLE_INPUT_SYSTEM
-using UnityEngine.InputSystem; // por si lo necesitas más tarde
-#endif
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager I;
+    public static GameManager I { get; private set; }
 
-    [Header("Economía")]
-    public double coins = 0;              // tu “moneda”: la llamamos Clicks en UI
-    public double coinsPerClick = 1;
-    public double coinsPerSecond = 0;     // pasivo (si lo usas)
+    [Header("Economía (run actual)")]
+    public double coins = 0;        // tus "clicks" actuales (aunque se llamen coins)
+    public double clickValue = 1;   // cuánto suma cada click
+    public double cps = 0;    
+    public int totalClicks = 0;
+      // clicks por segundo
 
     [Header("UI")]
-    public TextMeshProUGUI coinsText;     // mostrará: Clicks: X
-    public TextMeshProUGUI cpsText;       // mostrará: CPS: Y
+    [SerializeField] private TextMeshProUGUI textClicks; // "Clicks: X"
+    [SerializeField] private TextMeshProUGUI textCPS;    // "CPS: X"
 
- 
+    [Header("Renacer (valores base)")]
+    [SerializeField] private double baseClickValue = 1;
+    [SerializeField] private double baseCPS = 0;
+    private bool baseSaved = false;
 
-    // CPS manual (media móvil)
-    readonly Queue<float> clickTimes = new Queue<float>();
-    [SerializeField] float cpsWindowSeconds = 3f;
+    [Header("Crítico (Mejoras Avanzadas)")]
+public float critChance = 0f;      // 0.10 = 10%
+public float critMultiplier = 2f;  // x2
 
-    public double PlayerCPS
-    {
-        get
-        {
-            float now = Time.unscaledTime;
-            while (clickTimes.Count > 0 && now - clickTimes.Peek() > cpsWindowSeconds)
-                clickTimes.Dequeue();
-            if (cpsWindowSeconds <= 0f) return 0;
-            return clickTimes.Count / (double)cpsWindowSeconds;
-        }
-    }
 
     void Awake()
     {
-        if (I == null) I = this; else { Destroy(gameObject); return; }
-        UpdateUI();
+        if (I != null && I != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        I = this;
+    }
+
+    void Start()
+    {
+        SaveBaseIfNeeded();
+        RefreshUI();
+        ResetRun();
+
     }
 
     void Update()
     {
-        if (coinsPerSecond > 0)
-            coins += coinsPerSecond * Time.deltaTime;
-
-        //uiTimer += Time.deltaTime;
-        //if (uiTimer >= UI_REFRESH)
-        //{
-        //    uiTimer = 0f;
-        //    UpdateUI();
-        //}
-        UpdateUI();
+        // Sumar CPS continuamente
+        if (cps > 0)
+        {
+            coins += cps * Time.deltaTime;
+            RefreshUI();
+        }
     }
 
-    // Click manual del botón central
-    public void OnClick()
+    // ---------- CLICK (lo que te faltaba para ClickArea.cs) ----------
+public void OnClick()
+{
+    totalClicks++;
+
+    bool isCrit = Random.value < critChance;
+    double gain = clickValue * (isCrit ? critMultiplier : 1f);
+
+    coins += gain;
+    RefreshUI();
+
+    if (ClickFXManager.I != null)
     {
-        coins += coinsPerClick;
-
-        // registrar el click para el CPS del jugador
-        clickTimes.Enqueue(Time.unscaledTime);
-
-        //// 🔹 REFRESCAR UI AL INSTANTE
-        //UpdateUI();
-
-        ////// FX de texto+partículas
-        ////ClickFXManager.I?.PlayClickFX($"+{coinsPerClick:0}", 36);
-
-//        Vector2 screenPos;
-//#if ENABLE_INPUT_SYSTEM
-//        if (Mouse.current != null)
-//            screenPos = Mouse.current.position.ReadValue();
-//        else if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
-//            screenPos = Touchscreen.current.primaryTouch.position.ReadValue();
-//        else
-//            screenPos = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
-//#else
-//    screenPos = Input.mousePosition;
-//#endif
-
-//        if (ClickFXManager.I && ClickFXManager.I.canvasRoot)
-//        {
-//            Vector2 uiPos;
-//            RectTransformUtility.ScreenPointToLocalPointInRectangle(
-//                ClickFXManager.I.canvasRoot, screenPos, null, out uiPos
-//            );
-
-//            ClickFXManager.I.PlayClickFXAt(uiPos, $"+{coinsPerClick:0}", 28);
-//        }
+        if (isCrit)
+            ClickFXManager.I.PlayClickFXColored($"<b>CRIT</b> +{gain:0}", new Color(1f, 0.2f, 0.2f, 1f));
+        else
+            ClickFXManager.I.PlayClickFX($"+{gain:0}");
     }
+}
 
 
-    // APIs que usan los botones de mejora
+    // ---------- UPGRADES ----------
     public void AddClickValue(double amount)
     {
-        coinsPerClick += amount;
-        if (coinsPerClick < 0) coinsPerClick = 0;
-        UpdateUI();
+        clickValue += amount;
+        RefreshUI();
     }
 
     public void AddCPS(double amount)
     {
-        coinsPerSecond += amount;
-        if (coinsPerSecond < 0) coinsPerSecond = 0;
-        UpdateUI();
+        cps += amount;
+        RefreshUI();
     }
 
-    void UpdateUI()
+    public bool TrySpendClicks(double amount)
     {
-        if (coinsText) coinsText.text = $"Clicks: {coins:0}";
-
-        if (cpsText)
-        {
-            double totalCPS = PlayerCPS + coinsPerSecond;
-            cpsText.text = $"CPS: {totalCPS:0.##}";
-          
-        }
+        if (coins < amount) return false;
+        coins -= amount;
+        RefreshUI();
+        return true;
     }
 
+    // Alias opcional para usar "Clicks" sin renombrar coins
+    public double Clicks
+    {
+        get => coins;
+        set { coins = value; RefreshUI(); }
+    }
+
+    // ---------- RENACER / PRESTIGIO ----------
+    public void SaveBaseIfNeeded()
+    {
+        if (baseSaved) return;
+        baseClickValue = clickValue;
+        baseCPS = cps;
+        baseSaved = true;
+    }
+
+    public void ResetRun()
+    {
+        coins = 0;
+        clickValue = baseClickValue;
+        cps = baseCPS;
+        RefreshUI();
+    }
+
+    // ---------- UI ----------
+    public void RefreshUI()
+    {
+        if (textClicks != null) textClicks.text = $"Clicks: {coins:0}";
+        if (textCPS != null) textCPS.text = $"CPS: {cps:0}";
+    }
+
+    public double coinsPerClick
+    {
+        get => clickValue;
+        set => clickValue = value;
+    }
+
+    public double coinsPerSecond
+    {
+        get => cps;
+        set => cps = value;
+    }
 }
